@@ -1,6 +1,17 @@
 'use strict'
 
 function selectionSort(arrays){
+  for (let i = 0 ; i < arrays.length; i++){
+    let j = i;
+    while ((arrays[j] < arrays[j-1]) && (j >= 0) ){
+      let swapTemp = arrays[j-1];
+      arrays[j-1] = arrays[j];
+      arrays[j] = swapTemp;
+      j--
+    }
+  }
+  return arrays
+
 }
 
 // Driver code
